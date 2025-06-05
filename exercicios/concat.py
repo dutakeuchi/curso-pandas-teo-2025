@@ -34,7 +34,7 @@ for i in file_name:
     file.append(get_homicidio(name))
 file
 # %%
-data_atualizada = pd.concat(file, axis=1).reset_index().sort_values(['período','nome'])
+data_atualizada = pd.concat(file, axis=1).sort_values(['período','nome']).reset_index()
 data_atualizada
 # %%
 filtro = ['nome','homicidios-nao-negros','homicidios-negros',]
@@ -100,6 +100,8 @@ uf
 raca
 # %%
 uf.assign(teste=lambda uf: uf['homicidio_negro/homicidio_nao_negro'] + 6)
+# %%
+data_atualizada.to_csv('../data/homicidio_consolidado.csv', index=False)
 # %%
 data_atualizada
 # %%
