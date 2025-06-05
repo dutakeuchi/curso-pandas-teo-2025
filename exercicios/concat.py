@@ -101,3 +101,5 @@ raca
 # %%
 uf.assign(teste=lambda uf: uf['homicidio_negro/homicidio_nao_negro'] + 6)
 # %%
+data_atualizada
+# %%
