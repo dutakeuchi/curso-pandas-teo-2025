@@ -27,3 +27,9 @@ df_unstack.columns = colunas # renomeia os colunas do df com os nomes criados ac
 df_unstack
 
 # %%
+(df_stack.pivot_table(values='valor',
+                     index=['nome','período'], 
+                     columns=['métrica'] )
+         .reset_index()
+)
+# %%
